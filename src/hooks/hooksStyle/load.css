@@ -1,0 +1,44 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: 500;
+
+    color: var(--text-color-red);
+}
+
+.loading-dots {
+    margin-top: -25px;
+    color: var(--text-color-red);
+    /* Color de los puntos */
+}
+
+.loading-dots span {
+    font-size: 50px;
+}
+
+/* Animación de los puntos */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading-dots span {
+    animation: blink 1s infinite;
+}

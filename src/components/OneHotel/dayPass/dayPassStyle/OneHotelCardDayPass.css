@@ -1,0 +1,28 @@
+.OneHotelCardDayPass__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.OneHotelCardDayPass__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.OneHotelCardDayPass__header h3 {
+    color: var(--text-color-red);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.OneHotelCardDayPass__header button {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border-radius: 10px;
+    cursor: pointer;
+}

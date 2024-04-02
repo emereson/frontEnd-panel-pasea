@@ -1,0 +1,40 @@
+.OneHotelDayPass__container {
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.OneHotelDayPass__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OneHotelDayPass__buttons button {
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--body-white);
+    color: var(--text-color-gray);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.OneHotelDayPass__buttons img {
+    width: 30px;
+    height: 30px;
+}
+
+.OneHotelDayPass__buttonActive {
+    border: 2px solid var(--text-color-grayLigth);
+}

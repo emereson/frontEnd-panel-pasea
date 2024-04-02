@@ -1,0 +1,66 @@
+.serviceHotel__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid var(--text-color-red);
+
+}
+
+.serviceHotel__article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.serviceHotel__article h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color-gray);
+}
+
+.serviceHotel__article button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.serviceHotel__iconsList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.serviceHotel__iconsList li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color-gray);
+    margin: 5px 10px;
+}
+
+.serviceHotel__iconsList img {
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.serviceHotel__iconsList input {
+    width: 18px;
+    height: 18px;
+}
+
+.serviceHotel__iconsListEdit label {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 5px;
+}

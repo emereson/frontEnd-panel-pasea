@@ -1,0 +1,47 @@
+.hotels__container {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    padding: 1em;
+    padding-left: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    overflow: auto;
+}
+
+/* hotels__sectionOne */
+.hotels__sectionOne {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotels__sectionOne h1 {
+    color: var(--text-color-red);
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.hotels__sectionOne button {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* hotels__sectionTwo */
+
+.hotels__sectionTwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}

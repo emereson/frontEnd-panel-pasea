@@ -1,0 +1,117 @@
+.header__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-white);
+    border-top: 4px solid var(--text-color-red);
+    border-bottom: 1px solid var(--text-color-grayLigth);
+    z-index: 20;
+}
+
+/* headerTop__container */
+.headerDiv__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+/* heaserTop__sectionOne */
+.headerDiv__sectionOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.headerDiv__sectionOne a {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-color-gray);
+}
+
+.headerDiv__sectionOne img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.headerDiv__sectionOne p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.headerDiv__sectionOne a:hover {
+    font-size: 18px;
+    color: var(--text-color-red);
+}
+
+.header__logo {
+    position: absolute;
+    left: calc(50% - 40px);
+    height: 40px;
+    width: auto;
+
+}
+
+/* heaserTop__sectionTwo */
+.headerDiv__sectionTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.headerDiv__sectionTwo a {
+    display: flex !important;
+    font-size: 18px;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-color-gray);
+}
+
+.headerDiv__sectionTwo a:hover {
+    color: var(--text-color-red);
+}
+
+.headerDiv__sectionTwo p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.headerDiv__sectionTwo__btn {
+    width: 170px;
+    height: 38px;
+    background-color: var(--text-color-red);
+    color: var(--text-color-white) !important;
+    font-size: 15px !important;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid var(--text-color-red);
+    transition: 0.4s ease;
+}
+
+.headerDiv__sectionTwo__btn:hover {
+
+    background-color: var(--text-color-white);
+    color: var(--text-color-red) !important;
+
+}
+
+@media(max-width:800px) {}
+
+@media(max-height:600px) {}

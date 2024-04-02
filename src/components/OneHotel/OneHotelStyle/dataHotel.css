@@ -1,0 +1,43 @@
+/* .hotel__sectionOne  */
+.dataHotel__container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 2px solid var(--text-color-grayLigth);
+}
+
+.dataHotel__container img {
+    width: 250px;
+    height: auto;
+}
+
+
+
+.dataHotel__articleOne {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.dataHotel__articleOne h1 {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--text-color-gray);
+}
+
+.dataHotel__articleOne p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-gray);
+}
+
+.dataHotel__articleOne a {
+    color: var(--text-color-red);
+    font-weight: 500;
+}
