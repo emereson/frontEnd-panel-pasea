@@ -1,40 +1,28 @@
 .OneHotel__container {
     position: relative;
     width: 100%;
-    max-height: 100%;
-    padding-left: 316px;
+    min-height: 100%;
+    padding: 166px 30px 30px 346px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
-
+    align-items: start;
     overflow: auto;
-    border-top: 4px solid var(--body-red);
+    gap: 25px;
 }
 
 .oneHotel__sectionOne {
-    width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 16px;
+    flex-direction: column;
+    color: var(--text-color-gray);
     gap: 10px;
-    border-bottom: 1px solid var(--text-color-red);
 }
 
-.oneHotel__sectionOne button {
-    padding: 13px 15px;
-    background-color: transparent;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    border: 1px solid var(--text-color-red);
-    color: var(--text-color-red);
-    border-radius: 6px;
-    cursor: pointer;
+.oneHotel__sectionOne h2 {
+    font-size: 24px;
+    font-weight: 800;
 }
 
-.oneHotel__sectionOne__buttonActive {
-    background-color: var(--body-red) !important;
-    color: var(--text-color-white) !important;
+.oneHotel__sectionOne p {
+    font-size: 14px;
 }

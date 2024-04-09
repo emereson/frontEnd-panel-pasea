@@ -14,7 +14,7 @@ const CardDayPass = ({ dataHotel, setCrud, partnerData, crud }) => {
       .get(url, config)
       .then((res) => setAllDayPass(res.data.daysPass))
       .catch((err) => console.log(err));
-  }, [crud]);
+  }, [dataHotel, crud]);
   console.log(allDayPass);
 
   return (

@@ -9,7 +9,6 @@ import config from '../utils/getToken';
 const Hotels = ({ partnerData }) => {
   const [crud, setCrud] = useState('');
   const [hotels, setHotels] = useState();
-  const [selectUser, setSelectUser] = useState();
 
   useEffect(() => {
     const url = `${import.meta.env.VITE_URL_API}/hotel/partner/${
@@ -25,26 +24,36 @@ const Hotels = ({ partnerData }) => {
         console.log(err);
       });
   }, [crud]);
-  console.log(hotels);
 
   return (
     <div className="hotels__container">
-      <section className="hotels__sectionOne">
-        <h1>Tus Hoteles</h1>
-        <button onClick={() => setCrud('createHotel')}>
-          Agregar Hotel
-        </button>
-      </section>
-      <section className="hotels__sectionTwo">
-        {hotels?.map((hotel) => (
-          <CardHotel key={hotel.id} hotel={hotel} />
-        ))}
-      </section>
-      <CreateHotel
-        setCrud={setCrud}
-        crud={crud}
-        partnerData={partnerData}
-      />
+      {!crud ? (
+        <section className="hotels__sectionOne">
+          <h1>¡Gestiona tus Hoteles con facilidad!</h1>
+          <p>
+            Explora, edita y añade más establecimientos a tu cartera
+            con un solo clic.
+          </p>
+          <button onClick={() => setCrud('createHotel')}>
+            Agregar Hotel
+          </button>
+        </section>
+      ) : null}
+      {!crud ? (
+        <section className="hotels__sectionTwo">
+          {hotels?.map((hotel) => (
+            <CardHotel key={hotel.id} hotel={hotel} />
+          ))}
+        </section>
+      ) : null}
+
+      {crud === 'createHotel' ? (
+        <CreateHotel
+          setCrud={setCrud}
+          crud={crud}
+          partnerData={partnerData}
+        />
+      ) : null}
     </div>
   );
 };

@@ -1,0 +1,262 @@
+.createHotel__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+    gap: 30px;
+}
+
+.createHotel__sectionOne {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.createHotel__sectionOne h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-color-gray);
+}
+
+.createHotel__sectionOne p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-gray);
+}
+
+/* createHotel__sectionTwo */
+
+.createHotel__sectionTwo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.createHotel__sectionTwo__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.createHotel__sectionTwo__div span {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-white);
+    color: var(--text-color-red);
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 3px solid var(--body-red);
+}
+
+.createHotel__sectionTwo__div p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.createHotel__sectionTwo__span {
+    width: 42px;
+    height: 4px;
+    background-color: var(--body-red);
+
+}
+
+/* createHotel__form */
+
+.createHotel__form {
+    position: relative;
+    width: 150%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow: hidden !important;
+}
+
+.createHotel__container h3 {
+    padding: 12px;
+    padding-left: 50px;
+    font-size: 24px;
+    font-weight: 800;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    margin-bottom: 30px;
+}
+
+.createHotelForm__sectionOne {
+    width: 100%;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+    transition: 0.5s ease;
+}
+
+.createHotelForm__sectionOne span {
+    color: var(--text-color-red);
+}
+
+.createHotelForm__div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.createHotelForm__div h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-color-gray);
+}
+
+.createHotelForm__div label {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.createHotelForm__div input {
+    width: 100%;
+    max-width: 567px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 20px;
+    border: 1px solid var(--text-color-grayLigth);
+    border-radius: 5px;
+}
+
+.createHotelForm__fileInput {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.createHotelForm__fileInput__article {
+    position: relative;
+    width: 100%;
+    max-width: 567px;
+    height: 181px;
+    border: 1px solid var(--body-red);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.createHotelForm__fileInput__articleImg {
+    position: absolute;
+    width: 100%;
+    max-width: 120px;
+}
+
+.createHotelForm__fileInput__button {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color-red);
+    border: 1px solid var(--body-red);
+    border-radius: 20px;
+    padding: 0 25px;
+}
+
+.createHotelForm__fileInput__button img {
+    width: 24px;
+    height: 24px;
+}
+
+.createHotelForm__labelCheckbox {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50% !important;
+    border: 2px solid var(--text-color-grayLigth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.checked::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--body-red);
+    border-radius: 50%;
+
+}
+
+.createHotelForm__div textarea {
+    width: 100%;
+    max-width: 567px;
+    border: 2px solid var(--text-color-grayLigth);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.createHotelForm__sectionOne__buttons {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.createHotelForm__sectionOne__buttons button {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--body-white);
+    color: var(--text-color-gray);
+    border: 1px solid var(--text-color-gray);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.createHotelForm__sectionOne__buttonContinuar {
+    background-color: var(--body-red) !important;
+    color: var(--text-color-white) !important;
+    border: 1px solid var(--text-color-red) !important;
+}
+
+.createHotelForm__divLocation {
+    max-width: 567px;
+    display: flex;
+    gap: 30px;
+}

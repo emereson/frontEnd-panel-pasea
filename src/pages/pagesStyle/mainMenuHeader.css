@@ -1,5 +1,5 @@
 .mainMenuHeader__container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,7 +25,7 @@
 }
 
 .mainMenuHeader__sectionOne p {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text-color-white);
 }

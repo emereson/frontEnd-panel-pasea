@@ -31,13 +31,14 @@
   --body-gray: #3D4543;
   --body-red: #FF595A;
   --body-beige: #F9F9F9;
-  --body-light: #f8f8f8;
+  --body-light: #d6d6d6;
   --body-darkBlue: #000000;
   --text-color-black: #0b0b0b;
   --text-color-beige: #f1eee3;
   --text-color-white: #ffffff;
   --text-color-gray: #3D4543;
   --text-color-grayLigth: #C8C8C8;
+
   --text-color-red: #FF595A;
   --text-color-blue: #2E66F9;
   --text-color-gold: #c4ab67;
@@ -51,7 +52,7 @@ body {
   height: 100vh;
   min-width: 360px;
   font-family: "Montserrat", sans-serif;
-  background-color: #ffffff;
+  background-color: #F9F9F9;
   letter-spacing: 0.3px;
 }
 

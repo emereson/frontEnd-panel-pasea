@@ -1,153 +1,159 @@
-import React from 'react';
-import ViewSelectImg from '../../../../hooks/ViewSelectImg';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import config from '../../../../utils/getToken';
+import Load from '../../../../hooks/Load';
+import CreateDayPassFormOne from './CreateDayPassFormOne';
+import CreateDayPassFormTwo from './CreateDayPassFormTwo';
+import './crudDayPassStyle/createDayPass.css';
+import { iconsDayPassServices } from '../../../../assets/iconsDayPassServices';
 
-const CreateDayPass = ({ dataHotel, setCrud, crud, partnerData }) => {
-  const { register, handleSubmit, reset } = useForm();
-  const {
-    selectedImage,
-    selectedFileImg,
-    handleImageChange,
-    handleOnClickImg,
-    deleteSelectImgClick,
-  } = ViewSelectImg({ idElementImg: 'linkImg' });
+const CreateDayPass = ({
+  setViewContainer,
+  dataHotel,
+  setSelectNav,
+  partnerData,
+}) => {
+  const { register, handleSubmit, reset, watch } = useForm();
+  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [numberForm, setNumberForm] = useState(1);
+  const [category, setCategory] = useState('Familiar');
+  const [selectRoom, setselectRoom] = useState();
+  const [listSelectServices, setListSelectServices] = useState(
+    iconsDayPassServices
+  );
+  const [priceDays, setpriceDays] = useState();
+  const [priceSatuyday, setpriceSatuyday] = useState();
 
   const submit = (data) => {
+    setLoading(true);
+    const formData2 = {
+      name: data.namePackage,
+      typeRoom: selectRoom,
+      startTimetable1: data.startTimetable1,
+      endTimetable1: data.endTimetable1,
+      startTimetable2: data.startTimetable2,
+      endTimetable2: data.endTimetable2,
+      startTimetable3: data.startTimetable3,
+      endTimetable3: data.endTimetable3,
+      priceDays: data.priceDays,
+      priceSatuyday: data.priceSatuyday,
+    };
     const formData = new FormData();
     formData.append('name', data.name);
-    formData.append('houreStart', data.houreStart);
-    formData.append('houreEnd', data.houreEnd);
-    formData.append('price', data.price);
+    formData.append('dataPackage', JSON.stringify(formData2));
+    formData.append(
+      'listServices',
+      JSON.stringify(listSelectServices)
+    );
 
-    if (selectedFileImg) {
-      formData.append('linkImg', selectedFileImg);
-    }
-
-    const url = `${import.meta.env.VITE_URL_API}/dayPass/partner/${
-      partnerData?.id
-    }/hotel/${dataHotel?.id}`;
-
-    axios
-      .post(url, formData, config)
-      .then((res) => {
-        setCrud('');
-        deleteSelectImgClick();
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-        setCrud('');
-        deleteSelectImgClick();
+    if (selectedFiles.length > 0) {
+      selectedFiles.forEach((file, index) => {
+        formData.append(`linkImg`, file);
       });
-    reset();
+      const url = `${import.meta.env.VITE_URL_API}/dayPass/partner/${
+        partnerData?.id
+      }/hotel/${dataHotel?.id}`;
+
+      axios
+        .post(url, formData, config)
+        .then((res) => {
+          setViewContainer('all');
+          setSelectNav('dayPass');
+          setLoading(false);
+        })
+        .catch((err) => {
+          setViewContainer('all');
+          setSelectNav('dayPass');
+        });
+    }
   };
 
-  function OnlyNumbers(event) {
-    const charCode = event.which ? event.which : event.keyCode;
-    if (!(charCode >= 48 && charCode <= 57) && charCode !== 8) {
-      // Códigos de teclas para números del 0 al 9 y la tecla de retroceso
-      event.preventDefault();
-    }
-  }
-
   return (
-    <div
-      className={`crud__container  ${
-        crud === 'createDayPass' ? '' : 'closeCrud__container'
-      }`}
-    >
-      <form className="crud__form" onSubmit={handleSubmit(submit)}>
-        <h3>Nuevo Day Pass</h3>
-        {crud === 'createDayPass' ? (
-          <section className="crud__sectionOne">
-            <div className="crud__div">
-              <label htmlFor="name">Nombre:</label>
-              <input
-                {...register('name')}
-                id="name"
-                type="text"
-                required
-              />
-            </div>
-            <div className="crud__div">
-              <label htmlFor="linkImg">Subir Imagen :</label>
-              <div className="custom-file-input">
-                <input
-                  id="linkImg"
-                  type="file"
-                  onChange={handleImageChange}
-                  required
-                  style={{
-                    opacity: 0,
-                    position: 'absolute',
-                    zIndex: -1,
-                  }}
-                />
-                {selectedImage ? null : (
-                  <img
-                    src="./icons/image.svg"
-                    onClick={handleOnClickImg}
-                  />
-                )}
-              </div>
-              <div className="image__preview">
-                {selectedImage && (
-                  <img
-                    src={selectedImage}
-                    alt="Preview"
-                    onClick={handleOnClickImg}
-                  />
-                )}
-              </div>
-            </div>
-
-            <div className="crud__div">
-              <label htmlFor="houreStart">Hora de Entrada:</label>
-              <input
-                {...register('houreStart')}
-                id="houreStart"
-                type="time"
-                required
-              />
-            </div>
-            <div className="crud__div">
-              <label htmlFor="houreEnd">Hora de Salida:</label>
-              <input
-                {...register('houreEnd')}
-                id="houreEnd"
-                type="time"
-                required
-              />
-            </div>
-            <div className="crud__div">
-              <label htmlFor="price">Precio por Persona:</label>
-              <input
-                {...register('price')}
-                id="price"
-                type="text"
-                onKeyPress={OnlyNumbers}
-                required
-              />
-            </div>
-          </section>
-        ) : null}
-        <section className="crud__sectionTwo">
-          <button
-            type="button"
-            onClick={() => {
-              deleteSelectImgClick(), setCrud('');
-            }}
-          >
-            Cancelar
-          </button>
-
-          <button type="submit" className="crud__button">
-            Crear DayPass
-          </button>
+    <div className="createHotel__container">
+      <section className="createHotel__sectionOne">
+        <h2>Agrega tu Day Pass</h2>
+        <p>Convierte tus servicios en Experiencias inolvidables.</p>
+      </section>
+      <div
+        style={{
+          backgroundColor: 'white',
+          padding: '50px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '50px',
+        }}
+      >
+        <section className="createHotel__sectionTwo">
+          <div className="createHotel__sectionTwo__div">
+            <span
+              style={
+                numberForm === 1
+                  ? {
+                      color: 'var(--text-color-white)',
+                      background: 'var(--text-color-red)',
+                    }
+                  : null
+              }
+            >
+              1
+            </span>{' '}
+            <p>Crea tu Day Pass</p>
+          </div>
+          <span className="createHotel__sectionTwo__span"></span>
+          <div className="createHotel__sectionTwo__div">
+            <span
+              style={
+                numberForm === 2
+                  ? {
+                      color: 'var(--text-color-white)',
+                      background: 'var(--text-color-red)',
+                    }
+                  : null
+              }
+            >
+              2
+            </span>{' '}
+            <p>Crea tus Paquetes</p>
+          </div>
         </section>
-      </form>
+        {loading ? (
+          <Load />
+        ) : (
+          <form
+            className="createHotel__form"
+            onSubmit={handleSubmit(submit)}
+          >
+            <CreateDayPassFormOne
+              register={register}
+              setSelectedFiles={setSelectedFiles}
+              selectedFiles={selectedFiles}
+              setNumberForm={setNumberForm}
+              numberForm={numberForm}
+              setCrud={setCrud}
+              watch={watch}
+            />
+            <CreateDayPassFormTwo
+              register={register}
+              setNumberForm={setNumberForm}
+              numberForm={numberForm}
+              setCategory={setCategory}
+              category={category}
+              listSelectServices={listSelectServices}
+              setListSelectServices={setListSelectServices}
+              setselectRoom={setselectRoom}
+              selectRoom={selectRoom}
+              partnerData={partnerData}
+              dataHotel={dataHotel}
+              priceDays={priceDays}
+              setpriceDays={setpriceDays}
+              priceSatuyday={priceSatuyday}
+              setpriceSatuyday={setpriceSatuyday}
+            />
+          </form>
+        )}
+      </div>
     </div>
   );
 };

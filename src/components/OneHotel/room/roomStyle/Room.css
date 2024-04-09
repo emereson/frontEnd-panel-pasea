@@ -1,0 +1,57 @@
+.Room__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-white);
+    box-shadow: 3px 3px 10px 1px var(--body-light);
+}
+
+.Room__sectionOne {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* RoomSectionOne__header */
+.RoomSectionOne__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.RoomSectionOne__header ul {
+    width: 100%;
+    display: flex;
+    padding: 20px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color-gray);
+}
+
+.RoomSectionOne__header li {
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.RoomSectionOne__header div {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    overflow: hidden;
+}
+
+.RoomSectionOne__header span {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: calc(100%/3);
+    height: 100%;
+    background-color: var(--body-red);
+    transition: 0.5s ease;
+}

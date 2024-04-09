@@ -1,0 +1,109 @@
+.CreateDayPassFormTwo__iconsServices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    color: var(--text-color-gray);
+    gap: 10px;
+}
+
+.CreateDayPassFormTwo__iconsServices div {
+    min-width: calc(50% - 15px);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.CreateDayPassFormTwo__iconsServices img {
+    width: 35px;
+    height: 35px;
+}
+
+.CreateDayPassFormTwo__checkbox {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px !important;
+    border: 1px solid var(--body-gray);
+}
+
+.CreateDayPassFormTwo__checked {
+    border: 2px solid var(--body-red);
+}
+
+.CreateDayPassFormTwo__checked::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--body-red);
+    border-radius: 6px !important;
+}
+
+.CreateDayPassFormTwo__inputsTimetable {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.CreateDayPassFormTwo__inputsTimetable div {
+    width: 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.CreateDayPassFormTwo__inputsTimetable label {
+    color: var(--text-color-gray);
+}
+
+.CreateDayPassFormTwo__inputsTimetable article {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 5px;
+    border: 1px solid var(--text-color-grayLigth);
+    border-radius: 15px;
+    color: var(--text-color-grayLigth);
+}
+
+.CreateDayPassFormTwo__inputsTimetable input {
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: none;
+    color: var(--text-color-grayLigth);
+}
+
+.CreateDayPassFormTwo__inputsTimetable input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.CreateDayPassFormTwo__prices {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.CreateDayPassFormTwo__prices div {
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.CreateDayPassFormTwo__prices input {
+    border-radius: 10px;
+    color: var(--text-color-gray);
+}

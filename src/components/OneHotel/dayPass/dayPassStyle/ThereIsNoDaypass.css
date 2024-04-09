@@ -1,0 +1,44 @@
+.ThereIsNoDaypass__container {
+    width: 100%;
+    min-height: 455px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-gray);
+    gap: 20px;
+    background-color: var(--body-white);
+}
+
+.ThereIsNoDaypass__container img {
+    width: 212px;
+    height: 147px;
+}
+
+.ThereIsNoDaypass__container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.ThereIsNoDaypass__container p {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.ThereIsNoDaypass__container button {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border: 1px solid var(--text-color-red);
+    border-radius: 20px;
+    cursor: pointer;
+}

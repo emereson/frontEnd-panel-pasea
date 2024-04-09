@@ -1,10 +1,10 @@
 .serviceHotel__container {
     width: 100%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    border-bottom: 1px solid var(--text-color-red);
+    gap: 5px;
+
 
 }
 

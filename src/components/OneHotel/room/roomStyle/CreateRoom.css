@@ -1,0 +1,125 @@
+.CreateRoom__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color-gray);
+}
+
+.CreateRoom__container h1 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.CreateRoom__container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* .CreateRoom__form */
+
+.CreateRoom__form {
+    width: 100%;
+    max-width: 810px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--body-white);
+    padding: 40px;
+}
+
+.CreateRoomForm__div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.CreateRoomForm__div h4 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* .CreateRoomForm__counterContainer */
+
+.CreateRoomForm__counterContainer {
+    width: 133px;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--text-color-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.CreateRoomForm__counterContainer button {
+    width: 33%;
+    height: 100%;
+    font-size: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: start;
+    padding: 0 18px;
+    transition: 0.5s ease;
+}
+
+.CreateRoomForm__counterContainer button:hover {
+    background-color: var(--body-black);
+    color: var(--text-color-white);
+}
+
+.CreateRoomForm__counterContainer span {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* CreateRoomForm__divBed */
+
+.CreateRoomForm__divBed {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CreateRoomForm__divBed article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.CreateRoomForm__divBed img {
+    width: 35px;
+    height: 35px;
+}
+
+.CreateRoomForm__divBed p {
+    font-size: 18px;
+}
+
+.CreateRoomForm__buttons {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+}
+
+.CreateRoomForm__buttons button {
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: var(--text-color-red);
+    color: var(--text-color-white);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.CreateRoomForm__buttons button:nth-child(1) {
+    background-color: var(--body-white);
+    color: var(--text-color-gray);
+    border: 2px solid var(--text-color-gray);
+
+}

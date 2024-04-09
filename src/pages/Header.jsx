@@ -10,8 +10,6 @@ const Header = () => {
     setUrl(location.pathname);
   }, [location.pathname]);
 
-  console.log(url);
-
   return (
     <header className="header__container">
       <div className="headerDiv__container">

@@ -1,0 +1,30 @@
+.HeaderOneHotel__container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.HeaderOneHotel__container button {
+    width: 212px;
+    height: 61px;
+    padding: 13px 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid var(--text-color-red);
+    background-color: transparent;
+    color: var(--text-color-red);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.HeaderOneHotel__buttonActive {
+    background-color: var(--body-red) !important;
+    color: var(--text-color-white) !important;
+}

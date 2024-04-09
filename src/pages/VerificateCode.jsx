@@ -43,8 +43,6 @@ const VerificateCode = ({ partnerData }) => {
       axios
         .post(url, { code: codeString })
         .then((res) => {
-          console.log(res);
-
           const partnerDataJSON = JSON.stringify(res.data.partner);
           localStorage.setItem('partnerData', partnerDataJSON);
           navigate('/');

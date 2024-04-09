@@ -1,0 +1,170 @@
+.YourRooms__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    gap: 20px;
+}
+
+.YourRooms__article {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.YourRooms__article h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-color-gray);
+}
+
+.YourRooms__article button {
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* .YourRooms__tableContianer */
+
+.YourRooms__tableContianer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.YourRooms__tableContianer h4 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 22.2px;
+    font-weight: 800;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    padding-left: 35px;
+}
+
+.YourRooms__table {
+    width: 100%;
+    box-shadow: 5px 3px 10px -2px var(--body-light);
+    border-radius: 2px;
+    border-spacing: 0px;
+}
+
+
+
+.YourRooms__table th,
+.YourRooms__table td {
+    height: 50px;
+    padding: 0;
+    gap: 0;
+    border-bottom: 2px solid var(--body-light);
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-color-gray);
+
+}
+
+.YourRooms__table th {
+    font-size: 14.5px;
+}
+
+.YourRooms__table__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px !important;
+}
+
+.YourRooms__table__buttons button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.YourRooms__table__buttons img {
+    width: 22px;
+    height: 25px;
+}
+
+.YourRooms__table__selectContianer li {
+    font-size: 14px !important;
+}
+
+.YourRooms__table__select {
+    height: 40px !important;
+    border-radius: 5px !important;
+}
+
+.YourRooms__table__select p {
+    font-size: 14px !important;
+}
+
+.YourRooms__table__select img {
+    width: 15px !important;
+}
+
+.YourRooms__table input {
+    width: 100px;
+    height: 40px !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--text-color-grayLigth);
+    text-align: center;
+}
+
+/* .YourRooms__delete */
+
+.YourRooms__delete {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.508);
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.YourRooms__delete section {
+    background-color: var(--body-white);
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+}
+
+.YourRooms__delete p {
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.YourRooms__delete article {
+    display: flex;
+    gap: 20px;
+}
+
+.YourRooms__delete button {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--body-red);
+    color: var(--text-color-white);
+    border: 2px solid var(--body-red);
+    border-radius: 20px;
+    cursor: pointer;
+}
